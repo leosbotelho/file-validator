@@ -48,7 +48,21 @@ file-type.webp.formats=WEBP
 
 The `unlimited` value can be used for the maximum file size.
 
+## Installation
+
+### Maven
+
+```xml
+<dependency>
+    <groupId>fun.trium</groupId>
+    <artifactId>file-validator</artifactId>
+    <version>1.0.0-alpha</version>
+</dependency>
+```
+
 ## Usage
+
+**Note**: Import from `trium`, not `fun.trium`.
 
 Basic usage with a single configuration and multi-step validation:
 ```java
