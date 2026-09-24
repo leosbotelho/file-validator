@@ -29,7 +29,8 @@ Not all configuration properties are required.
 
 Example:
 ```properties
-file-size.min=1
+# 1 KiB
+file-size.min=1024
 # 10 MiB
 file-size.max=10485760
 
