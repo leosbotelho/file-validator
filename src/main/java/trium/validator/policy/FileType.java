@@ -97,7 +97,6 @@ public record FileType(
             Optional<String> extension,
             Optional<String> mimeType,
             Optional<String> format) {
-
         Objects.requireNonNull(candidates, "candidates must not be null");
         Objects.requireNonNull(extension, "extension must not be null");
         Objects.requireNonNull(mimeType, "mimeType must not be null");
