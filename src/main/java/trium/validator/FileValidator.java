@@ -211,8 +211,7 @@ public record FileValidator(
     /// @param mimeType the MIME type to validate
     /// @return the file type mappings compatible with the provided metadata,
     ///         or all configured mappings if no metadata is provided
-    /// @throws IllegalStateException if the required validation policies are unavailable
-    ///                               for the provided inputs
+    /// @throws IllegalStateException if required validation policies are unavailable
     /// @throws IllegalArgumentException if strict validation is requested without
     ///                                  size, extension, or MIME type
     /// @throws NullPointerException if {@code size}, {@code extension}, or {@code mimeType} is null
