@@ -339,4 +339,31 @@ public record FileValidator(
     public void laxValidateFormat(List<FileTypeMapping> candidates, Optional<String> format) {
         validateFormat(false, candidates, format);
     }
+
+    /// Validates the image format against all configured file type mappings.
+    ///
+    /// For multi-step validation, use
+    /// {@link #validateFormat(boolean, List, Optional)}.
+    public void validateFormat(boolean strict, Optional<String> format) {
+        validateFormat(
+                strict,
+                fileType.map(o -> o.mappings().stream().toList()).orElseGet(List::of),
+                format);
+    }
+
+    /// Validates the image format against all configured file type mappings
+    /// in strict mode.
+    ///
+    /// @see #validateFormat(boolean, Optional)
+    public void strictValidateFormat(Optional<String> format) {
+        validateFormat(true, format);
+    }
+
+    /// Validates the image format against all configured file type mappings
+    /// in lax mode.
+    ///
+    /// @see #validateFormat(boolean, Optional)
+    public void laxValidateFormat(Optional<String> format) {
+        validateFormat(false, format);
+    }
 }
