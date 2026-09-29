@@ -39,11 +39,11 @@ public class FileViolationException extends RuntimeException {
         this(reason, false);
     }
 
-    public Reason getReason() {
+    public Reason reason() {
         return reason;
     }
 
-    public boolean isConstrained() {
+    public boolean constrained() {
         return constrained;
     }
 }
