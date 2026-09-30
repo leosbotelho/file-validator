@@ -43,7 +43,7 @@ public record FileSize(
             throw new IllegalArgumentException("min must not be unlimited");
         }
         if (max < min) {
-            throw new IllegalArgumentException("max must not be less than min");
+            throw new IllegalArgumentException("max cannot be less than min");
         }
     }
 
